@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Outfit&display=swap');
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+}
+* {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.App {
+    background-color: var(--light-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+.QR-component {
+    width: 18rem;
+    padding: 1rem;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 7px var(--grayish-blue);
+}
+.QR-component > img {
+    border-radius: 1.5rem;
+    width: 100%;
+}
+.QR-text {
+    display: flex;
+    flex-direction: column;
+}
+.QR-text > .title {
+    text-align: center;
+    color: var(--dark-blue);
+    font-weight: bolder;
+    font-size: 1.4em;
+}
+.QR-text > .body {
+    text-align: center;
+    color: var(--grayish-blue);
+    font-weight: lighter;
+    font-size: 1em;
+}
+@media screen and (max-width: 375px) {
+    .QR-component {
+        width: 100%;
+        margin: 0 1rem;
+    }
+}
